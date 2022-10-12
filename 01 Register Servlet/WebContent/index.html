@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Form page</title>
+
+<style>
+	.container{	
+		width:40%;
+		border: 1px solid black;
+		margin:auto;
+		padding: 20px;
+		font-size: 20px;
+	}
+	
+	#myform table tr td input{
+	font-size: 20px;
+	}
+
+</style>
+</head>
+<body>
+	<div class="container">
+		<h2  style="text-center;">MY FORM</h2>
+		<form id="myform" action="RegisterServlet" method="post">
+			<table>
+				<!-- tr is row and td is column -->
+				<tr>
+					<td>Enter your name</td>
+					<td><input type="text" name="user_name" /></td>
+				</tr>
+
+				<tr>
+					<td>Enter your password</td>
+					<td><input type="text" name="password" /></td>
+				</tr>
+
+				<tr>
+					<td>Enter your email</td>
+					<td><input type="email" name="user_name" /></td>
+				</tr>
+				<!-- This is radio and here name has to be same  and values = that you want to provide -->
+				<tr>
+					<td>Select your gender</td>
+					<td>
+						<input type="radio" name="user_gender" value="male"/>male &nbsp; &nbsp;
+						<input type="radio" name="user_gender" value="female"/>female
+					</td>
+				</tr>
+				
+				<tr>
+					<td>Select your course</td>
+					<td>
+						<select name="user_course">
+							<option value="java">java</option>
+							<option value="php">php</option>
+							<option value="python">python</option>
+						</select>
+					</td>
+				</tr>
+				
+				<tr>
+					<td style="text-align:right;">
+						<input type="checkbox" value="checked" name="condition"/>
+						Agree terms and condition
+					</td>
+				</tr>
+				
+					<tr>
+						<td>
+							<button type="submit">Register</button>
+							<button type="reset">Reset</button>
+						</td>
+				</tr>
+			</table>
+		</form>
+	</div>
+
+</body>
+</html>
